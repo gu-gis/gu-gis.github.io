@@ -13,11 +13,11 @@ execute:
   echo: true
 format:
   html:
-    output-file: "w5-idx.html"
+    output-file: "index.html"
     toc: true
     df-print: kable
   revealjs:
-    output-file: "w5-slides.html"
+    output-file: "slides.html"
     df-print: kable
     slide-number: true
     scrollable: true

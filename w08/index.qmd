@@ -13,20 +13,18 @@ execute:
   echo: true
 format:
   html:
-    output-file: "w9-idx.html"
-    css: styles.css
+    output-file: "index.html"
     toc: true
     df-print: kable
   revealjs:
-    output-file: "w9-slides.html"
-    css: styles.css
+    output-file: "slides.html"
     df-print: kable
     slide-number: true
     scrollable: true
     code:
       echo: true
       eval: true
-bibliography: r4spatial-workshop.bib
+bibliography: ../r4spatial-workshop.bib
 ---
 
 ## R Coding Workshop for GIS: 7th Meeting

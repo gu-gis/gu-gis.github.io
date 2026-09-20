@@ -13,12 +13,12 @@ execute:
   echo: true
 format:
   html:
-    output-file: "w6-idx.html"
+    output-file: "index.html"
     css: styles.css
     toc: true
     df-print: kable
   revealjs:
-    output-file: "w6-slides.html"
+    output-file: "slides.html"
     css: styles.css
     df-print: kable
     slide-number: true

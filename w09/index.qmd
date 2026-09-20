@@ -14,19 +14,17 @@ execute:
 format:
   html:
     output-file: "index.html"
-    css: styles.css
     toc: true
     df-print: kable
   revealjs:
     output-file: "slides.html"
-    css: styles.css
     df-print: kable
     slide-number: true
     scrollable: true
     code:
       echo: true
       eval: true
-bibliography: r4spatial-workshop.bib
+bibliography: ../r4spatial-workshop.bib
 ---
 
 ## R Coding Workshop for GIS: 7th Meeting
@@ -127,7 +125,7 @@ book_df |>
 - `geom_point()`, `geom_text()`, `geom_label()`: two variable, using points to mark position
 
 ```{r}
-bk_df <- read_csv('data/bkdf-us-main.csv')
+bk_df <- read_csv('data/book-df-us-main.csv')
 ```
 
 :::: {.columns}

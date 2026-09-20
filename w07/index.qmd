@@ -14,12 +14,10 @@ execute:
 format:
   html:
     output-file: "index.html"
-    css: styles.css
     toc: true
     df-print: kable
   revealjs:
     output-file: "slides.html"
-    css: styles.css
     df-print: kable
     slide-number: true
     scrollable: true

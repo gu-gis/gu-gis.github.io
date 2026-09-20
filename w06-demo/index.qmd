@@ -13,11 +13,10 @@ execute:
   echo: true
 format:
   html:
-    output-file: "w6-demo-idx.html"
-    css: styles.css
+    output-file: "index.html"
     toc: true
     df-print: kable
-bibliography: dohnanyi.bib
+bibliography: ../dohnanyi.bib
 ---
 
 ## Note 1: Bringing Point Data in Place
