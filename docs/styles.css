@@ -1,0 +1,11 @@
+/* css styles */
+body {
+  font-family: "Galvji", sans-serif;
+  font-size: 13px;
+}
+.reveal {
+font-family: 'Galvji', sans-serif;
+}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+font-family: 'Galvji', serif;
+}

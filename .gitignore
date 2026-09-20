@@ -1,0 +1,12 @@
+/.quarto/
+.DS_Store
+deploy2.sh
+git-push.sh
+sf-wkt.png
+bad-vis.png
+data
+r4spatial-workshop.bib
+deploy3.sh
+
+
+**/*.quarto_ipynb
