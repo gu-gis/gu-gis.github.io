@@ -24,243 +24,230 @@
   {
     "objectID": "w3-idx.html#outline-for-today",
     "href": "w3-idx.html#outline-for-today",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Outline for Today",
     "text": "Outline for Today\n\nBase R syntax and coding style\nR data types and data structures\n\nWorking with Vectors and Data Frames",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#base-r-syntax-and-coding-style",
     "href": "w3-idx.html#base-r-syntax-and-coding-style",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Base R syntax and coding style",
     "text": "Base R syntax and coding style",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#print-and-comment-out",
     "href": "w3-idx.html#print-and-comment-out",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "print() and comment out",
     "text": "print() and comment out\n\n\"Welcome to R Coding Workshop!\"\n\n[1] \"Welcome to R Coding Workshop!\"\n\n\n\nprint(\"Welcome to R Coding Workshop!\")\n\n[1] \"Welcome to R Coding Workshop!\"\n\n2025\n\n[1] 2025\n\n\n\n⌘ + /: Commenting\n\n\n# 2025\n# command + forward slash to comment out",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#variables",
     "href": "w3-idx.html#variables",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Variables",
     "text": "Variables\n&lt;-: initialize a variable and assign a value\n\n# variable_name &lt;- variable_value\nx &lt;- 1984\ny &lt;- \"World Geodetic System\"\n\n\n\n\n\n\n\n\nR variable naming",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#r-data-types-class",
     "href": "w3-idx.html#r-data-types-class",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "R Data Types class()",
     "text": "R Data Types class()\n\n\n\n“numeric”\n\ndouble\ninteger\n\n“character”\n“logical”\n\n\n\nprint(class(x))\n\n[1] \"numeric\"\n\nprint(class(y))\n\n[1] \"character\"\n\nz &lt;- class(x) == class(y)\nprint(class(z))\n\n[1] \"logical\"\n\n\n\n\n\n\n\n\n\n\n\nOperators and Logical Operators\nType Casting",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#r-data-structures",
     "href": "w3-idx.html#r-data-structures",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "R Data Structures",
     "text": "R Data Structures\n\nVector\nMatrix\nArray\nFactor\nList\nData Frame",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#starting-with-vectors",
     "href": "w3-idx.html#starting-with-vectors",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Starting with Vectors",
     "text": "Starting with Vectors\n\n\nWays to create a vector\n\nc()\nseq(from, to, by)\n:\n\n\n\nv1 &lt;- c(\n    \"Bryce Canyon\", \"Canyonlands\", \"Arches\", \"Zion\", \"Capitol Reef\"\n    )\nv2 &lt;- 1:5\nv2\n\n[1] 1 2 3 4 5\n\n\n\nv3 &lt;- seq(21.9, 25.3, 0.1)\nis.vector(v2)\n\n[1] TRUE",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#subsetting-a-vector",
     "href": "w3-idx.html#subsetting-a-vector",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Subsetting a Vector",
     "text": "Subsetting a Vector\n\nIndexing\n\n\n# v1 &lt;- c(\n    # \"Bryce Canyon\", \"Canyonlands\", \"Arches\", \"Zion\", \"Capitol Reef\"\n    # )\nv1[1]\n\n[1] \"Bryce Canyon\"\n\nv1[-1]\n\n[1] \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\"\n\n\n\nSubsetting using Logical Vectors\n\n\nv4 &lt;- 1:12\nbool_v4 &lt;- v4 &gt; 8\nv4[bool_v4]\n\n[1]  9 10 11 12\n\n\n\nAccess by name\n\n\nnames(v4) &lt;- month.abb\nv4[\"Jan\"]\n\nJan \n  1",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#data-frame-objects",
     "href": "w3-idx.html#data-frame-objects",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Data Frame objects",
     "text": "Data Frame objects\n\nThinking of data.frame as a collection of column vectors\n\nWays to create a df\n\nmth_df &lt;- data.frame(\n    mth = 1:12,\n    mth_str = month.abb\n)\nmth_df\n\n\n\n\n\nmth\nmth_str\n\n\n\n\n1\nJan\n\n\n2\nFeb\n\n\n3\nMar\n\n\n4\nApr\n\n\n5\nMay\n\n\n6\nJun\n\n\n7\nJul\n\n\n8\nAug\n\n\n9\nSep\n\n\n10\nOct\n\n\n11\nNov\n\n\n12\nDec\n\n\n\n\n\n\n\nmth_df |&gt; class()\n\n[1] \"data.frame\"\n\n\n\n\n\n\n\n\n\nimport external tabular dataset",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#data.frame-attributes",
     "href": "w3-idx.html#data.frame-attributes",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "data.frame attributes",
     "text": "data.frame attributes\n\nutah_df &lt;- data.frame(\n    national_park = v1,\n    lat = c(\n        37.640621053549125, 38.478777627059635, 38.6167568289248,\n        37.200271934321734, 38.291603924096385\n        ),\n    lon = c(\n        -112.16957627116382, -109.8251716515892, -109.61982474559946, \n        -112.98700616100083, -111.2619347149233\n        )\n)\n\n\nhead(utah_df, 2)\n\n\n\n\n\nnational_park\nlat\nlon\n\n\n\n\nBryce Canyon\n37.64062\n-112.1696\n\n\nCanyonlands\n38.47878\n-109.8252\n\n\n\n\n\n\n\n# nrow() and ncol()\ndim(utah_df)\n\n[1] 5 3\n\n\n\ncolnames(utah_df)\n\n[1] \"national_park\" \"lat\"           \"lon\"",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#subsetting-data.frame",
     "href": "w3-idx.html#subsetting-data.frame",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Subsetting data.frame",
     "text": "Subsetting data.frame\n\nprint(utah_df[, 1])\n\n[1] \"Bryce Canyon\" \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\"\n\nprint(utah_df[1, ])\n\n  national_park      lat       lon\n1  Bryce Canyon 37.64062 -112.1696\n\nprint(utah_df$national_park)\n\n[1] \"Bryce Canyon\" \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\"\n\nutah_df[[\"national_park\"]]\n\n[1] \"Bryce Canyon\" \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\"",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#r-list",
     "href": "w3-idx.html#r-list",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "R List",
     "text": "R List\n\nA vector that allows to have elements of different data type\nNested\n\n\nsummary(utah_df)\n\n national_park           lat             lon        \n Length:5           Min.   :37.20   Min.   :-113.0  \n Class :character   1st Qu.:37.64   1st Qu.:-112.2  \n Mode  :character   Median :38.29   Median :-111.3  \n                    Mean   :38.05   Mean   :-111.2  \n                    3rd Qu.:38.48   3rd Qu.:-109.8  \n                    Max.   :38.62   Max.   :-109.6  \n\n\n\nclass(utah_df[1])\n\n[1] \"data.frame\"",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-idx.html#getting-to-sf-and-a-map",
     "href": "w3-idx.html#getting-to-sf-and-a-map",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Getting to sf and a map",
     "text": "Getting to sf and a map\n\nlibrary(sf)\n\nLinking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE\n\nlibrary(mapview)\nutah_sf &lt;- st_as_sf(\n    utah_df,\n    coords = c('lon', 'lat'),\n    crs = 4326\n)\nutah_sf |&gt; mapview()\n\n\n\n\n\n\nutah_sf\n\n\n\n\n\nnational_park\ngeometry\n\n\n\n\nBryce Canyon\nPOINT (-112.1696 37.64062)\n\n\nCanyonlands\nPOINT (-109.8252 38.47878)\n\n\nArches\nPOINT (-109.6198 38.61676)\n\n\nZion\nPOINT (-112.987 37.20027)\n\n\nCapitol Reef\nPOINT (-111.2619 38.2916)\n\n\n\n\n\n\n\n\n\n\n\n\n\nprelude to factor class: How were the points colored? Why are we having a legend on the map?\n\nHow to avoid presenting this map",
     "crumbs": [
-      "Coding Workshop",
       "Week 3"
     ]
   },
   {
     "objectID": "w3-slides.html#intro-to-coding-workshop",
     "href": "w3-slides.html#intro-to-coding-workshop",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Intro to Coding Workshop!",
     "text": "Intro to Coding Workshop!"
   },
   {
     "objectID": "w3-slides.html#outline-for-today",
     "href": "w3-slides.html#outline-for-today",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Outline for Today",
     "text": "Outline for Today\n\nBase R syntax and coding style\nR data types and data structures\n\nWorking with Vectors and Data Frames"
   },
   {
     "objectID": "w3-slides.html#base-r-syntax-and-coding-style",
     "href": "w3-slides.html#base-r-syntax-and-coding-style",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Base R syntax and coding style",
     "text": "Base R syntax and coding style"
   },
   {
     "objectID": "w3-slides.html#print-and-comment-out",
     "href": "w3-slides.html#print-and-comment-out",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "print() and comment out",
     "text": "print() and comment out\n\n\"Welcome to R Coding Workshop!\"\n\n[1] \"Welcome to R Coding Workshop!\"\n\n\n\nprint(\"Welcome to R Coding Workshop!\")\n\n[1] \"Welcome to R Coding Workshop!\"\n\n2025\n\n[1] 2025\n\n\n\n⌘ + /: Commenting\n\n\n# 2025\n# command + forward slash to comment out"
   },
   {
     "objectID": "w3-slides.html#variables",
     "href": "w3-slides.html#variables",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Variables",
     "text": "Variables\n&lt;-: initialize a variable and assign a value\n\n# variable_name &lt;- variable_value\nx &lt;- 1984\ny &lt;- \"World Geodetic System\"\n\n\n\n\n\nR variable naming"
   },
   {
     "objectID": "w3-slides.html#r-data-types-class",
     "href": "w3-slides.html#r-data-types-class",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "R Data Types class()",
     "text": "R Data Types class()\n\n\n\n“numeric”\n\ndouble\ninteger\n\n“character”\n“logical”\n\n\n\nprint(class(x))\n\n[1] \"numeric\"\n\nprint(class(y))\n\n[1] \"character\"\n\nz &lt;- class(x) == class(y)\nprint(class(z))\n\n[1] \"logical\"\n\n\n\n\n\n\n\nOperators and Logical Operators\nType Casting"
   },
   {
     "objectID": "w3-slides.html#r-data-structures",
     "href": "w3-slides.html#r-data-structures",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "R Data Structures",
     "text": "R Data Structures\n\nVector\nMatrix\nArray\nFactor\nList\nData Frame"
   },
   {
     "objectID": "w3-slides.html#starting-with-vectors",
     "href": "w3-slides.html#starting-with-vectors",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Starting with Vectors",
     "text": "Starting with Vectors\n\n\nWays to create a vector\n\nc()\nseq(from, to, by)\n:\n\n\n\nv1 &lt;- c(\n    \"Bryce Canyon\", \"Canyonlands\", \"Arches\", \"Zion\", \"Capitol Reef\"\n    )\nv2 &lt;- 1:5\nv2\n\n[1] 1 2 3 4 5\n\n\n\nv3 &lt;- seq(21.9, 25.3, 0.1)\nis.vector(v2)\n\n[1] TRUE"
   },
   {
     "objectID": "w3-slides.html#subsetting-a-vector",
     "href": "w3-slides.html#subsetting-a-vector",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Subsetting a Vector",
     "text": "Subsetting a Vector\n\nIndexing\n\n\n# v1 &lt;- c(\n    # \"Bryce Canyon\", \"Canyonlands\", \"Arches\", \"Zion\", \"Capitol Reef\"\n    # )\nv1[1]\n\n[1] \"Bryce Canyon\"\n\nv1[-1]\n\n[1] \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\"\n\n\n\nSubsetting using Logical Vectors\n\n\nv4 &lt;- 1:12\nbool_v4 &lt;- v4 &gt; 8\nv4[bool_v4]\n\n[1]  9 10 11 12\n\n\n\nAccess by name\n\n\nnames(v4) &lt;- month.abb\nv4[\"Jan\"]\n\nJan \n  1"
   },
   {
     "objectID": "w3-slides.html#data-frame-objects",
     "href": "w3-slides.html#data-frame-objects",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Data Frame objects",
     "text": "Data Frame objects\n\nThinking of data.frame as a collection of column vectors\n\nWays to create a df\n\nmth_df &lt;- data.frame(\n    mth = 1:12,\n    mth_str = month.abb\n)\nmth_df\n\n\n\n\n\nmth\nmth_str\n\n\n\n\n1\nJan\n\n\n2\nFeb\n\n\n3\nMar\n\n\n4\nApr\n\n\n5\nMay\n\n\n6\nJun\n\n\n7\nJul\n\n\n8\nAug\n\n\n9\nSep\n\n\n10\nOct\n\n\n11\nNov\n\n\n12\nDec\n\n\n\n\n\n\n\nmth_df |&gt; class()\n\n[1] \"data.frame\"\n\n\n\n\n\n\nimport external tabular dataset"
   },
   {
     "objectID": "w3-slides.html#data.frame-attributes",
     "href": "w3-slides.html#data.frame-attributes",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "data.frame attributes",
     "text": "data.frame attributes\n\nutah_df &lt;- data.frame(\n    national_park = v1,\n    lat = c(\n        37.640621053549125, 38.478777627059635, 38.6167568289248,\n        37.200271934321734, 38.291603924096385\n        ),\n    lon = c(\n        -112.16957627116382, -109.8251716515892, -109.61982474559946, \n        -112.98700616100083, -111.2619347149233\n        )\n)\n\n\nhead(utah_df, 2)\n\n\n\n\n\nnational_park\nlat\nlon\n\n\n\n\nBryce Canyon\n37.64062\n-112.1696\n\n\nCanyonlands\n38.47878\n-109.8252\n\n\n\n\n\n\n\n# nrow() and ncol()\ndim(utah_df)\n\n[1] 5 3\n\n\n\ncolnames(utah_df)\n\n[1] \"national_park\" \"lat\"           \"lon\""
   },
   {
     "objectID": "w3-slides.html#subsetting-data.frame",
     "href": "w3-slides.html#subsetting-data.frame",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Subsetting data.frame",
     "text": "Subsetting data.frame\n\nprint(utah_df[, 1])\n\n[1] \"Bryce Canyon\" \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\"\n\nprint(utah_df[1, ])\n\n  national_park      lat       lon\n1  Bryce Canyon 37.64062 -112.1696\n\nprint(utah_df$national_park)\n\n[1] \"Bryce Canyon\" \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\"\n\nutah_df[[\"national_park\"]]\n\n[1] \"Bryce Canyon\" \"Canyonlands\"  \"Arches\"       \"Zion\"         \"Capitol Reef\""
   },
   {
     "objectID": "w3-slides.html#r-list",
     "href": "w3-slides.html#r-list",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "R List",
     "text": "R List\n\nA vector that allows to have elements of different data type\nNested\n\n\nsummary(utah_df)\n\n national_park           lat             lon        \n Length:5           Min.   :37.20   Min.   :-113.0  \n Class :character   1st Qu.:37.64   1st Qu.:-112.2  \n Mode  :character   Median :38.29   Median :-111.3  \n                    Mean   :38.05   Mean   :-111.2  \n                    3rd Qu.:38.48   3rd Qu.:-109.8  \n                    Max.   :38.62   Max.   :-109.6  \n\n\n\nclass(utah_df[1])\n\n[1] \"data.frame\""
   },
   {
     "objectID": "w3-slides.html#getting-to-sf-and-a-map",
     "href": "w3-slides.html#getting-to-sf-and-a-map",
-    "title": "R Coding Workshop",
+    "title": "Week 3: From Base R to sf",
     "section": "Getting to sf and a map",
-    "text": "Getting to sf and a map\n\nlibrary(sf)\nlibrary(mapview)\nutah_sf &lt;- st_as_sf(\n    utah_df,\n    coords = c('lon', 'lat'),\n    crs = 4326\n)\nutah_sf |&gt; mapview()\n\n\n\n\n\n\nutah_sf\n\n\n\n\n\nnational_park\ngeometry\n\n\n\n\nBryce Canyon\nPOINT (-112.1696 37.64062)\n\n\nCanyonlands\nPOINT (-109.8252 38.47878)\n\n\nArches\nPOINT (-109.6198 38.61676)\n\n\nZion\nPOINT (-112.987 37.20027)\n\n\nCapitol Reef\nPOINT (-111.2619 38.2916)\n\n\n\n\n\n\n\n\n\n\nprelude to factor class: How were the points colored? Why are we having a legend on the map?\n\nHow to avoid presenting this map"
+    "text": "Getting to sf and a map\n\nlibrary(sf)\n\nLinking to GEOS 3.13.0, GDAL 3.8.5, PROJ 9.5.1; sf_use_s2() is TRUE\n\nlibrary(mapview)\nutah_sf &lt;- st_as_sf(\n    utah_df,\n    coords = c('lon', 'lat'),\n    crs = 4326\n)\nutah_sf |&gt; mapview()\n\n\n\n\n\n\nutah_sf\n\n\n\n\n\nnational_park\ngeometry\n\n\n\n\nBryce Canyon\nPOINT (-112.1696 37.64062)\n\n\nCanyonlands\nPOINT (-109.8252 38.47878)\n\n\nArches\nPOINT (-109.6198 38.61676)\n\n\nZion\nPOINT (-112.987 37.20027)\n\n\nCapitol Reef\nPOINT (-111.2619 38.2916)\n\n\n\n\n\n\n\n\n\n\nprelude to factor class: How were the points colored? Why are we having a legend on the map?\n\nHow to avoid presenting this map"
   },
   {
     "objectID": "w7-idx.html#outline",
@@ -1375,12 +1362,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Taman",
+    "title": "GIS Coding Workshop",
     "section": "",
-    "text": "In winter, when night’s shade\npossesses longer half the world,\nand longer in the idle stillness,\nby the bemisted moon,\nthe lazy orient sleeps,\nawakened at her customary hour\nshe would get up by candles.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Week\n\n\n\nTitle\n\n\n\nDate\n\n\n\n\n\n\n\n\n3\n\n\nWeek 3: From Base R to sf\n\n\nSep 11\n\n\n\n\n\n\n4\n\n\nWeek 4: Working with data.frames and tibbles\n\n\nSep 18\n\n\n\n\n\n\n5\n\n\nWeek 5: EDA with tidyverse\n\n\nSep 25\n\n\n\n\n\n\n6\n\n\nWeek 6 Demo: Finding and Using Datasets for Final Projects\n\n\nSep 30\n\n\n\n\n\n\n6\n\n\nWeek 6: Using Base R and Imported Functions\n\n\nOct 2\n\n\n\n\n\n\n7\n\n\nWeek 7: Combining Data From Different Sources\n\n\nOct 9\n\n\n\n\n\n\n8\n\n\nWeek 8: The Structure of sf Objects\n\n\nOct 16\n\n\n\n\n\n\n9\n\n\nWeek 9: ggplot2 Basics\n\n\nOct 23\n\n\n\n\n\n\n10\n\n\nWeek 10: Aesthetic Mappings in ggplot2\n\n\nOct 30\n\n\n\n\n\n\n12\n\n\nWeek 12: Working with OpenStreetMap Data and Data in Raster Format\n\n\nNov 13\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -1925,5 +1909,22 @@
       "Coding Workshop",
       "Week 6 Demo"
     ]
+  },
+  {
+    "objectID": "w3-idx.html#connecting-positron-to-jupyterhub",
+    "href": "w3-idx.html#connecting-positron-to-jupyterhub",
+    "title": "Week 3: From Base R to sf",
+    "section": "Connecting Positron to Jupyterhub",
+    "text": "Connecting Positron to Jupyterhub",
+    "crumbs": [
+      "Week 3"
+    ]
+  },
+  {
+    "objectID": "w3-slides.html#connecting-positron-to-jupyterhub",
+    "href": "w3-slides.html#connecting-positron-to-jupyterhub",
+    "title": "Week 3: From Base R to sf",
+    "section": "Connecting Positron to Jupyterhub",
+    "text": "Connecting Positron to Jupyterhub"
   }
 ]

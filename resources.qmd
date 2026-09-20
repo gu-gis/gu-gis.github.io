@@ -3,6 +3,8 @@ title: "R for Geospatial Data Analysis: Learning Resources"
 subtitle: "GIS & Geospatial Data Analysis (Fall 2025)"
 execute:
   echo: true
+categories:
+  - "Extra Resources"
 format:
   html:
     output-file: "resources-idx.html"
